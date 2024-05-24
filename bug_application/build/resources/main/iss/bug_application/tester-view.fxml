@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="396.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iss.bug_application.controller.TesterController">
+    <children>
+        <ImageView fitHeight="302.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@tester_interface.jpeg" />
+            </image>
+        </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#50727b" height="258.0" layoutY="138.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="601.0" />
+      <TextField fx:id="testerText" editable="false" layoutX="142.0" layoutY="31.0" prefHeight="26.0" prefWidth="119.0" promptText="Your name" />
+      <Button fx:id="addButton" layoutX="526.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="26.0" prefWidth="52.0" text="Add" />
+      <TextArea fx:id="descriptionText" layoutX="357.0" layoutY="198.0" prefHeight="94.0" prefWidth="142.0" promptText="Description:" />
+      <TextField fx:id="nameText" layoutX="357.0" layoutY="156.0" prefHeight="26.0" prefWidth="142.0" promptText="Name:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#354856" height="33.0" layoutY="105.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="601.0" />
+        <TableView fx:id="bugsList" layoutX="14.0" layoutY="149.0" prefHeight="230.0" prefWidth="303.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="name" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="description" />
+                <TableColumn fx:id="statusColumn" prefWidth="75.0" text="status" />
+                <TableColumn fx:id="solvedColumn" prefWidth="75.0" text="resolved_by" />
+            </columns>
+        </TableView>
+      <Button fx:id="modifyButton" layoutX="525.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleModify" text="Modify" />
+      <Button fx:id="exitButton" layoutX="552.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+      <Label layoutX="22.0" layoutY="108.0" text="Bugs list:" textFill="#fff8f8">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="109.0" text="Add bugs:" textFill="#fff8f8">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="524.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleInfor" prefHeight="26.0" prefWidth="54.0" text="Info" />
+    </children>
+</AnchorPane>
